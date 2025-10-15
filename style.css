@@ -15,6 +15,39 @@
   --font-body: 'Space Mono', 'Google Sans Display', sans-serif;
 }
 
+.idle-toolbar {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 0.8rem 0 0.4rem;
+}
+
+.idle-toolbar button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(9, 18, 19, 0.78);
+  color: var(--text-primary);
+  letter-spacing: 0.1em;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.idle-toolbar button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px var(--glow-green);
+}
+
+.idle-toolbar button.is-active {
+  background: linear-gradient(90deg, rgba(89, 255, 224, 0.85), rgba(45, 216, 152, 0.85));
+  color: #041112;
+  border-color: transparent;
+  box-shadow: 0 16px 38px rgba(45, 216, 152, 0.3);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -155,11 +188,11 @@ main {
 }
 
 .hero {
-  min-height: calc(100vh - 136px);
+  min-height: calc(100vh - 148px);
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
   gap: clamp(2.3rem, 5.5vw, 5.4rem);
-  padding: clamp(2.2rem, 6vh, 4rem) clamp(1.5rem, 7vw, 4.8rem) clamp(3rem, 7vh, 4.6rem);
+  padding: clamp(1.4rem, 4.5vh, 3.4rem) clamp(1.5rem, 7vw, 4.8rem) clamp(2.4rem, 6.5vh, 4.2rem);
   align-items: center;
 }
 
